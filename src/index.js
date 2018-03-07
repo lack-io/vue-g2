@@ -23,6 +23,10 @@ const install = function (Vue, _) {
     })
 }
 
+if (typeof window !== 'undefined' && window.Vue) {
+    window.Vue.use(paykeyboard);
+}
+
 module.exports =  {
     version: '1.0',
     VeLine,
