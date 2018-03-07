@@ -1,10 +1,10 @@
-import VeLine from './packages/line'
-import VeBar from './packages/bar'
-import VePie from './packages/pie'
-import VeArea from './packages/area'
-import VePoint from './packages/point'
-import VeRadar from './packages/radar'
-import VeCloud from './packages/cloud'
+import VeLine from './packages/line/index.js'
+import VeBar from './packages/bar/index.js'
+import VePie from './packages/pie/index.js'
+import VeArea from './packages/area/index.js'
+import VePoint from './packages/point/index.js'
+import VeRadar from './packages/radar/index.js'
+import VeCloud from './packages/cloud/index.js'
 
 
 const compontents = [
@@ -32,7 +32,6 @@ module.exports =  {
     VePoint,
     VeRadar,
     VeCloud,
-    install 
 }
 
 module.exports.default = module.exports;
