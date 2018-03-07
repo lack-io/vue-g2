@@ -17,7 +17,6 @@ export default {
                         fontFamily: cfg.origin._origin.font,
                         fill: cfg.color,
                         textBaseline: 'Alphabetic',
-                        ...cfg.style,
                         x: cfg.x,
                         y: cfg.y,
                     },

@@ -1,6 +1,6 @@
 <template>
-    <v-area :data="data">
-    </v-area>
+    <v-point :data="data">
+    </v-point>
 </template>
 
 <script>

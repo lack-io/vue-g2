@@ -24,7 +24,7 @@ const install = function (Vue, _) {
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(paykeyboard);
+    install(window.Vue)
 }
 
 module.exports =  {
@@ -36,6 +36,7 @@ module.exports =  {
     VePoint,
     VeRadar,
     VeCloud,
+    install
 }
 
 module.exports.default = module.exports;
