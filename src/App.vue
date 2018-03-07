@@ -47,7 +47,6 @@ export default {
     },
     mounted() {
         setTimeout(() => {
-            console.log('change')
             this.content = {
                 title: '容量',
                 content: '300',

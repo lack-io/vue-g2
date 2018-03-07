@@ -17,13 +17,14 @@ const compontents = [
     VeCloud
 ]
 
-function install (Vue, _) {
+const install = function (Vue, _) {
     compontents.forEach(compontent => {
         Vue.compontent(compontent.name, compontent)
     })
 }
 
-export {
+module.exports =  {
+    version: '1.0',
     VeLine,
     VeBar,
     VePie,
@@ -33,3 +34,5 @@ export {
     VeCloud,
     install 
 }
+
+module.exports.default = module.exports;
