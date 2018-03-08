@@ -1,9 +1,9 @@
 import Point from './main'
 
-const VePoint = {
-    install: function(Vue) {
-        Vue.component(Point.name, Point)
-    }
+
+Point.install = function (Vue) {
+    Vue.component(Point.name, Point)
 }
 
-export default VePoint
+
+export default Point

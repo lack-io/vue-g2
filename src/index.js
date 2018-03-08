@@ -1,42 +1,39 @@
-import VeLine from './packages/line/index.js'
-import VeBar from './packages/bar/index.js'
-import VePie from './packages/pie/index.js'
-import VeArea from './packages/area/index.js'
-import VePoint from './packages/point/index.js'
-import VeRadar from './packages/radar/index.js'
-import VeCloud from './packages/cloud/index.js'
+import VLine from './packages/line'
+import VBar from './packages/bar'
+import VPie from './packages/pie'
+import VArea from './packages/area'
+import VPoint from './packages/point'
+import VRadar from './packages/radar'
+import VCloud from './packages/cloud'
+import VLiqu from './packages/liqu'
 
 
 const compontents = [
-    VeLine,
-    VeBar,
-    VePie,
-    VeArea,
-    VePoint,
-    VeRadar,
-    VeCloud
+    VLine,
+    VBar,
+    VPie,
+    VArea,
+    VPoint,
+    VRadar,
+    VCloud,
+    VLiqu
 ]
 
-const install = function (Vue, _) {
-    compontents.forEach(compontent => {
-        Vue.compontent(compontent.name, compontent)
-    })
-}
+const install = function(Vue) {
+    compontents.forEach(component => {
+        Vue.component(component.name, component);
+    });
+
+};
 
 if (typeof window !== 'undefined' && window.Vue) {
-    install(window.Vue)
+    install(window.Vue);
 }
 
-module.exports =  {
+const vueG2 = {
     version: '1.0',
-    VeLine,
-    VeBar,
-    VePie,
-    VeArea,
-    VePoint,
-    VeRadar,
-    VeCloud,
-    install
+    install,
+    ...compontents,    
 }
 
-module.exports.default = module.exports;
+export default vueG2

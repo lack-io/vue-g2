@@ -1,9 +1,7 @@
 import Bar from './main'
 
-const VeBar = {
-    install: function(Vue) {
+Bar.install = function(Vue) {
         Vue.component(Bar.name, Bar)
     }
-}
 
-export default VeBar
+export default Bar

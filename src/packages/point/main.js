@@ -17,7 +17,7 @@ export default {
             + '</li>'
         });
         this.chart.source(this.data);
-        const point = this.chart.point().position(position.slice(1))
+        const point = this.chart.point().position(position.slice(position.length - 2))
             .color(position[0])
             .size(4)
             .shape('circle')
