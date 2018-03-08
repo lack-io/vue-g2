@@ -12,16 +12,9 @@
   "dependencies": {
     "@antv/data-set": "^0.8.5",
     "@antv/g2": "^3.0.5-beta.4",
-    "echart": "^0.1.3",
     "echarts": "^4.0.4",
     "echarts-liquidfill": "^2.0.0",
-    "iview": "^2.9.2",
-    "less": "^3.0.1",
-    "less-loader": "^4.0.6",
-    "viser": "^2.2.0",
-    "viser-vue": "^2.2.0",
-    "vue": "^2.5.2",
-    "vue-g2": "https://github.com/xingyys/vue-g2.git"
+    "vue": "^2.5.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

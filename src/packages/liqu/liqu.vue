@@ -18,8 +18,8 @@ export default {
         }
     },
     props: {
-        width: { type: Number, default: 300 },
-        height: { type: Number, default: 300 },
+        width: { type: Number, default: 200 },
+        height: { type: Number, default: 200 },
         data: { type: Array, default() { return [] } },
         name: { type: String, default: "" },
         tooltip: { type: Object, default() { return {show: false} } },
@@ -45,7 +45,7 @@ export default {
                 type: 'liquidFill',
                 color: ['#294D99', '#156ACF', '#1598ED', '#45BDFF'],
                 center: ['50%', '50%'],
-                radius: '50%',
+                radius: '95%',
                 amplitude: '8%',
                 waveLength: '80%',
                 phase: 'auto',
@@ -93,6 +93,9 @@ export default {
     },
     mounted() {
         this.init()
+    },
+    beforeDestroy() {
+        this.chart.dispose()
     }
 }
 </script>
