@@ -20,7 +20,7 @@ Vue.use(VueG2)
 ```javascript
 <template>
     <div>
-        <v-line :data="data" :height="300" :forceFit="false">
+        <v-line :data="data" :height="300" :forceFit="false" :position="['month', 'Tokyo', 'London']">
         </v-line>
     </div>
 </template>
@@ -54,7 +54,7 @@ export default {
 ```JavaScript
 <template>
     <div>
-        <v-bar :data="data">
+        <v-bar :data="data" :position="['name', 'Jan.', 'Feb.', 'Mar.']">
         </v-bar>
     </div>
 </template>
@@ -79,7 +79,7 @@ export default {
 ```javascript
 <template>
     <div>
-        <v-pie :data="data" :height="300" :forceFit="false">
+        <v-pie :data="data" :height="300" :forceFit="false" :position="['item', 'count']">
         </v-pie>
     </div>
 </template>
@@ -106,7 +106,7 @@ export default {
 ```javascript
 <template>
     <div>
-        <v-area :data="data">
+        <v-area :data="data" :position="['year', 'value']">
         </v-area>
     </div>
 </template>
@@ -137,7 +137,7 @@ export default {
 ```javascript
 <template>
     <div>
-        <v-radar :data="data">
+        <v-radar :data="data" :position="['item', 'a', 'b']">
         </v-radar>
     </div>
 </template>
@@ -170,7 +170,7 @@ export default {
 ```javascript
 <template>
     <div>
-        <v-point :data="data">
+        <v-point :data="data" :position=['gender', 'height', 'weight']>
         </v-point>
     </div>
 </template>
@@ -202,7 +202,7 @@ export default {
 ```JavaScript
 <template>
     <div>
-        <v-cloud :data="data">
+        <v-cloud :data="data" :position="['gender', 'height', 'weigth']">
         </v-cloud>
     </div>
 </template>
