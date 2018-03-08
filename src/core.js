@@ -2,15 +2,31 @@ import G2 from '@antv/g2'
 import DataSet from '@antv/data-set'
 
 export default {
-    template: `
-    <div class="g2-canvas">
-      <div class="canvas" ref="canvas"></div>
-      <span class="loading"></span>
-      <div class="slider" ref="canvas"></div>
-    </div>
-    `,
-
+    render(h) {
+        return h('div', {
+            class: "g2-canvas",
+        }, [
+            h('div', {
+                class: 'canvas',
+                ref: 'canvas'
+            }),
+            h('span', {
+                class: "loading",
+                ref: 'loading'
+            }),
+            h('div', {
+                class: "slider",
+                ref: 'slider',
+            })
+        ])
+    },
+    data() {
+        return {
+            flag: false,
+        }
+    },
     props: {
+        loading: { type: Boolean, default: false },
         width: { type: Number, default: 500 },
         height: { type: Number, default: 400 },
         forceFit: { type: Boolean, default: true },
@@ -19,6 +35,7 @@ export default {
         animate: { type: Boolean, default: true },
         padding: { type: Array, default() { return [20, 20, 95, 80] } },
         data: { type: Array, default() { return [] } },
+        position: { type: Array, default() { return [] } },
         label: { type: Object, default() { return {} } },
         legend: { type: Object, default() { return {} } },
         tooltip: { type: Object, default() { return {} } },
@@ -26,12 +43,6 @@ export default {
         // source: { type: Object, default() { return {} } },
         // scale: { type: Object, default() { return {} } },
         // legend: { type: Object, default() { return {} } },
-    },
-
-    watch: {
-        data: function() {
-            this.chart.changeData(this.data)
-        }
     },
 
     created() {
@@ -50,7 +61,7 @@ export default {
             padding: this.padding,
             animate: this.animate,
         })
-        if(Object.keys(this.legend).length !== 0) {
+        if (Object.keys(this.legend).length !== 0) {
             this.chart.legend(this.legend)
         }
         this.ds = new DataSet();
