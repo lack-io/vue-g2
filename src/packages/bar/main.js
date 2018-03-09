@@ -20,7 +20,7 @@ export default {
                 this.flag = true
                 if (this.position.length <= 2) {
                     this.chart.source(this.data)
-                    this.chart.interval().position(this.position).color(this.position[0])
+                    this.chart.interval().position(this.position)
                     this.chart.render()
                 } else {
                     this.dv = this.ds.createView().source(this.data);
