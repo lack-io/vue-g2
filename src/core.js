@@ -44,7 +44,11 @@ export default {
         // scale: { type: Object, default() { return {} } },
         // legend: { type: Object, default() { return {} } },
     },
-
+    watch: {
+        data: function() {
+            if(this.forceFit) { this.chart.forceFit() }
+        }
+    },
     created() {
         this.chart = null
         this.ds = null
